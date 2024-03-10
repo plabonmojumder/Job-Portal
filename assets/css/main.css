@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family-Poppins:wght@200;300;400;500;600;700;800;900&family-Roboto:wght@400;700&display-swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  position: relative;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 0;
+  line-height: 1.2;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+label {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy-blue: #010c29;
+  --white: white;
+  --red: #fd1616;
+  --black: #000;
+  --small-font-color: #707070;
+}
+/* ---------------common-css-end---- ---------------*/
+/* -----foooter section css start----- */
+
+.footer-area {
+  padding: 50px 0px;
+  background: #060f24;
+  position: relative;
+}
+.footer-area::before {
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/footer.png);
+  background-position: center center;
+  background-size: cover;
+  width: 140px;
+  height: 138px;
+  right: 60px;
+  top: 70px;
+  opacity: 0.2;
+  animation: rotate 30s infinite linear;
+}
+
+.footer-widget {
+  margin-bottom: 30px;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-widget p {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+}
+
+.footer-social a i {
+  color: #3955bc;
+  background: white;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  line-height: 35px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+.footer-social a i:hover {
+  background: red;
+  color: white;
+}
+
+.footer-widget h3 {
+  font-size: 22px;
+  color: white;
+  position: relative;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.footer-widget h3::before {
+  position: absolute;
+  content: "";
+  background: white;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: -15px;
+}
+
+.footer-widget ul {
+  padding-left: 0;
+}
+.footer-widget ul li {
+  list-style-type: none;
+  color: #d3d3d3;
+  margin-bottom: 5px;
+}
+.footer-widget ul li a {
+  color: #d3d3d3;
+  font-size: 14px;
+}
+.footer-widget ul li a i {
+  color: red;
+  position: relative;
+  font-size: 12px;
+}
+
+.footer-widget ul li a:hover {
+  color: red;
+}
+
+.footer-widget ul:last-child {
+  margin-bottom: 0;
+}
+
+.footer-info ul li {
+  margin-bottom: 12px;
+}
+.footer-info ul li span {
+  display: block;
+}
+.footer-info ul li span i {
+  color: red;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.copyright-text {
+  background: #03143b;
+  padding: 20px 0;
+}
+.copyright-text p {
+  margin-bottom: 0;
+  color: white;
+  line-height: 1;
+}
+.copyright-text a {
+  color: white;
+}
+.copyright-text a:hover {
+  color: red;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -----foooter section css end----- */

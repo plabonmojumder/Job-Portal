@@ -1,0 +1,1622 @@
+/*--------- header section css start------ */
+.header {
+  width: 100%;
+  background-color: var(--navy-blue);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  height: 80px;
+}
+nav.navbar {
+  position: unset;
+}
+
+.header-wraper {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.logo img {
+  max-width: 200px;
+}
+.nav-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu .nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 35px;
+  list-style: none;
+  height: 100%;
+}
+.nav-menu .nav-item .nav-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.nav-menu .nav-item .nav-list .nav-link {
+  font-size: 15px;
+  /* font-weight: 600; */
+  color: var(--white);
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.drop-down-menu .nav-list a:hover,
+.nav-menu .nav-item .nav-list:hover .nav-link {
+  color: var(--red);
+}
+.nav-menu .nav-item .nav-list .nav-link i {
+  font-size: 14px;
+  color: var(--white);
+  transition: all 0.5s ease;
+  margin-left: 4px;
+}
+
+.nav-menu .nav-item .nav-list:hover .nav-link i {
+  transform: rotate(180deg);
+  color: var(--red);
+}
+/*---- dropdown-css-start------ */
+.nav-item .nav-list .drop-down-menu {
+  border-top: 3px solid var(--red);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 250px;
+  position: absolute;
+  left: 0%;
+  top: 80px;
+  transform: translateY(40px) !important;
+  background-color: var(--navy-blue);
+  padding: 0px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.nav-item .nav-list:hover .drop-down-menu {
+  transform: translateX(00px) !important;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-down-menu .nav-list {
+  display: block;
+  border-bottom: 1px dotted var(--white);
+}
+.drop-down-menu .nav-list:hover {
+  background-color: #657294;
+  border-radius: 0px 0px 10px 10px;
+}
+.drop-down-menu .nav-list:last-child {
+  border: none;
+}
+
+.drop-down-menu .nav-list a {
+  display: block;
+  font-size: 15px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  color: var(--white);
+}
+/* ----dropdown-css-end---- */
+.header-button .sign-up-btn {
+  border: none;
+  background: transparent;
+  color: var(--white);
+  padding: 8px 15px;
+  font-size: 14px;
+  padding: 10px 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.header-button .sign-up-btn:hover {
+  color: var(--red);
+}
+.header-button .sign-in-btn {
+  border: none;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: all 0.4s ease;
+}
+.header-button .sign-in-btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/*  mobile menu css */
+.navbar-bar-icon {
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+  height: 25px;
+  display: none;
+}
+.navbar-bar-icon span {
+  height: 3px;
+  width: 40px;
+  background: var(--white);
+  display: inline-block;
+  position: relative;
+  display: none;
+}
+
+.navbar-bar-icon span:before,
+.navbar-bar-icon span:after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+.navbar-bar-icon span:before {
+  top: 10px;
+}
+.navbar-bar-icon span:after {
+  bottom: 10px;
+}
+
+.header.mobile-menu-visible .navbar-bar-icon span {
+  background: transparent;
+}
+
+.header.mobile-menu-visible .navbar-bar-icon span:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header.mobile-menu-visible .navbar-bar-icon span:after {
+  transform: rotate(45deg);
+  bottom: 0;
+}
+/* mobole menu css end */
+
+/* ---------------header section css end----------- */
+
+/* -------banner section css start------------ */
+.banner-section {
+  min-height: 700px;
+  background-image: url(/assets/images/banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  margin-top: 80px;
+}
+.banner-section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 4, 44, 0.6);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.banner-section::after {
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/white-shape.png);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.banner-content p {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.banner-content h1 {
+  font-size: 65px;
+  font-weight: 700;
+  color: var(--white);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-transform: capitalize;
+}
+
+.banner-content .banner-form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 45px;
+}
+
+.banner-content .banner-form .form-group {
+  text-align: left;
+}
+.banner-form .form-group label {
+  font-size: 15px;
+  color: #5c5a5a;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.banner-form .form-group .form-control {
+  height: 60px;
+  border-radius: 10px;
+  padding: 12px 20px;
+  transition: all 0.5s ease;
+}
+
+.banner-content .banner-form .form-group .form-control:focus {
+  border-color: unset;
+  box-shadow: unset;
+  border: 1px solid var(--red);
+}
+.banner-form .form-group .form-control::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8e8d8d;
+  transition: all 0.5s ease;
+}
+.banner-form .find-btn {
+  background: var(--red);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  color: var(--white);
+  border-radius: 10px;
+  top: 25px;
+  position: relative;
+  padding: 16px 20px;
+  transition: all 0.5s ease;
+}
+
+.banner-form .find-btn:hover {
+  background: #001935;
+}
+
+.banner-form .find-btn i {
+  left: 10px;
+  position: relative;
+}
+
+.banner-content .keyword li {
+  display: inline-block;
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.banner-content .keyword li a {
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.banner-content .keyword li a:hover {
+  color: var(--red);
+}
+/*--------- banner section css end ---------*/
+/* -----------catagory section css star ----------*/
+.category-section {
+  padding: 50px 0px 40px 0px;
+}
+
+.every-section-top-content {
+  text-align: center;
+}
+.every-section-top-content h3 {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 50px;
+  color: var(--navy-blue);
+  text-transform: capitalize;
+}
+.every-section-top-content p {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+  font-size: 17px;
+  color: var(--small-font-color);
+  margin-bottom: 30px;
+}
+.category-card {
+  text-align: center;
+  padding: 40px 0px 30px 0px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border: 1px solid transparent;
+  transition: 0.5s;
+  margin-top: 20px;
+}
+.category-card:hover {
+  border: 1px solid var(--red);
+  transform: translateY(-5px);
+}
+.category-card i {
+  font-size: 50px;
+  color: var(--red);
+  margin-bottom: 25px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.category-card h3 {
+  font-size: 22px;
+  line-height: 40px;
+  color: var(--navy-blue);
+  font-weight: 600;
+}
+
+.category-card p {
+  font-size: 17px;
+  line-height: 25px;
+  color: var(--small-font-color);
+}
+
+/* -----------catagory section css end ----------*/
+
+/* -----job section css start------- */
+
+.job-section {
+  padding: 50px 0px;
+}
+.job-card {
+  border: 1px dashed #d9dbdf;
+  padding: 30px;
+  background: #fde7e7;
+  transition: all 0.3 ease;
+  height: 100%;
+}
+.job-card:hover {
+  border: 1px dashed var(--red);
+}
+.company-logo {
+  text-align: center;
+  border: 1px dashed #d9dbdf;
+  height: 100%;
+  line-height: 80px;
+  background: var(--white);
+}
+.company-logo img {
+  max-width: 40px;
+}
+
+.job-info h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.job-info h3 a {
+  color: var(--navy-blue);
+}
+
+.job-info h3 a:hover {
+  color: var(--red);
+}
+
+.job-item {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.job-item .job-list {
+  display: block;
+  font-size: 15px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+.job-item .job-list :last-child {
+  margin-bottom: 0;
+}
+
+.job-item .job-list .job-link {
+  color: var(--red);
+  font-weight: 500;
+}
+
+.job-item .job-list .job-icon {
+  top: 2px;
+  position: relative;
+  font-size: 18px;
+}
+
+.job-requirment {
+  text-align: center;
+}
+.job-requirment span {
+  background: var(--white);
+  display: block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--red);
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.job-requirment a i {
+  color: #afafaf;
+  font-size: 20px;
+  background: var(--white);
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px dashed #afafaf;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.job-requirment a i:hover {
+  background: var(--red);
+  color: var(--white);
+}
+
+.job-requirment p {
+  font-size: 14px;
+  color: var(--small-font-color);
+}
+.job-requirment p i {
+  width: inherit;
+  height: inherit;
+  top: 3px;
+  font-size: 18px;
+}
+/* .job-requirment p i:hover {
+  border: 1px dashed red;
+} */
+
+/* -------use section css start-------- */
+.use-section {
+  background-image: url(/assets/images/use-banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+  padding: 50px 0px 50px 0px;
+}
+.use-section::before {
+  position: absolute;
+  content: "";
+  background: rgba(1, 12, 41, 0.85);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.use-section .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.use-section .section-title h2 {
+  color: var(--white);
+}
+
+.use-circel-inner-text {
+  text-align: center;
+  /* margin-bottom: 30px;
+  padding: 0 20px; */
+  position: relative;
+}
+.use-circel-inner-text span {
+  color: var(--red);
+  background: #fdc7c7;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  line-height: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -100px;
+  margin: auto;
+  z-index: 1;
+}
+
+.use-circel-inner-text i {
+  font-size: 50px;
+  color: var(--red);
+  background: var(--white);
+  display: inline-block;
+  border: 3px dashed var(--red);
+  position: relative;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 150px;
+  margin-bottom: 30px;
+}
+.use-circel-inner-text h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.use-circel-inner-text p {
+  color: var(--white);
+}
+.use-circel-inner-text:hover i {
+  background: var(--red);
+  color: var(--white);
+}
+/* ---Top company css start  ---- */
+.top-company-section {
+  padding: 50px 0px 40px 0px;
+}
+.top-company-card {
+  padding: 35px 0px;
+  background-color: var(--white);
+  text-align: center;
+  border: 1px dashed var(--red);
+  margin-top: 20px;
+}
+.top-company-card a img {
+  margin-bottom: 20px;
+}
+.top-company-card h3 {
+  /* line-height: 30px; */
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--navy-blue);
+}
+.top-company-card p {
+  /* line-height: 25px; */
+  font-size: 16px;
+  color: var(--small-font-color);
+  margin-bottom: 20px;
+}
+.top-company-card button {
+  border: none;
+  background-color: var(--red);
+  padding: 8px 15px;
+  font-size: 14px;
+  color: var(--white);
+  transition: all 0.4s ease;
+}
+.top-company-card button:hover {
+  background-color: var(--navy-blue);
+  color: var(--white);
+}
+
+/* ---Top company css end  ---- */
+
+.why-choose {
+  background: #010c29;
+  position: relative;
+  /* text-align: center; */
+}
+.why-choose::before {
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/dot-design.png);
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  left: 0;
+  width: 330px;
+  height: 400px;
+}
+
+.why-choose-text {
+  padding: 0px 25px;
+  margin-top: 80px;
+}
+.why-choose-text .section-title {
+  margin-bottom: 50px;
+}
+.why-choose-text .section-title h2 {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--white);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.why-choose-text .section-title p {
+  color: var(--white);
+  max-width: 600px;
+  margin: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.media {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.media i {
+  background: #182441;
+  font-size: 30px;
+  color: var(--red);
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100px;
+
+  position: relative;
+}
+
+.media-body {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.media-body h5 {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.media-body p {
+  color: var(--white);
+  font-size: 15px;
+}
+
+.counter-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.counter-text h2 {
+  color: var(--red);
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.counter-text p {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.why-choose-img {
+  background-image: url(/assets/images/why.choose.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+}
+/* -----Why choose css start --------- */
+
+/* ------pricing section css start------ */
+.pricing-section {
+  padding: 40px 0px 30px 0px;
+}
+.price-card {
+  text-align: center;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 45px 30px;
+  position: relative;
+  margin-top: 20px;
+}
+.price-card::before {
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/price.png);
+  background-position: center center;
+  background-size: cover;
+  width: 145px;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+}
+.price-card:hover .price-top i {
+  background-color: var(--navy-blue);
+  color: var(--white);
+}
+.price-top h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--navy-blue);
+}
+
+.price-top i {
+  color: var(--red);
+  font-size: 30px;
+  border: 1px dashed var(--red);
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: all 0.6s ease;
+}
+
+.price-top h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--navy-blue);
+  margin-bottom: 10px;
+}
+.price-top h2 sub {
+  font-size: 14px;
+  bottom: 2px;
+  color: var(--small-font-color);
+}
+
+.price-feature {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.price-feature ul {
+  text-align: center;
+}
+.price-feature ul li {
+  font-size: 14px;
+  color: var(--small-font-color);
+}
+
+.price-btn a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--red);
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 10px;
+  position: relative;
+  z-index: 9 !important;
+  overflow: hidden;
+}
+.price-btn a::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--navy-blue);
+  border-radius: 50%;
+  left: 0;
+  bottom: -100%;
+  transition: all 0.4s ease;
+}
+.price-btn a:hover::after {
+  bottom: 0;
+  border-radius: 0;
+  z-index: -1;
+}
+.price-btn a:hover {
+  color: var(--white);
+}
+/* ------pricing section css end------ */
+/* -------job section css start------ */
+.job-info-section {
+  background-image: url(/assets/images/job-info.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 0;
+  padding: 50px 0px 30px 0px;
+}
+
+.job-info-section::before {
+  position: absolute;
+  content: "";
+  background: rgba(1, 12, 41, 0.85);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.job-information-card {
+  background: var(--red);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.job-recruiting {
+  background: var(--navy-blue);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.job-information-card .job-information {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.job-information-card .job-information .job-information-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 60px;
+  background: #fbd3d3;
+  border-radius: 50px;
+}
+.job-information-card .job-information .job-information-icon i {
+  color: var(--red);
+  font-size: 30px;
+}
+/* 
+.job-information-card-left-content {
+} */
+.job-information-card-left-content h5 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.job-information-card-left-content p {
+  color: var(--white);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.job-information-card-left-content a {
+  color: var(--white);
+  font-size: 15px;
+  transition: all 0.5 ease;
+}
+.job-information-card-left-conten i:hover,
+.job-information-card-left-content a:hover {
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+}
+
+.job-information-card-left-conten i {
+  color: var(--white);
+  font-size: 13px;
+  transition: all 0.5 ease;
+  top: 2px;
+}
+/* -------job section css start------ */
+
+/*-------- Candidate section css start-------- */
+.candidate-section {
+  padding: 40px 0px 50px 0px;
+}
+.condidate-item-wraper {
+}
+.condidate-item {
+  text-align: center;
+  position: relative;
+  margin-bottom: 110px;
+  margin-top: 10px;
+}
+.candidate-img img {
+  border-radius: 10px;
+}
+
+.candidate-social {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+.candidate-social a i {
+  background: var(--red);
+  color: var(--white);
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  line-height: 35px;
+  margin: 0 3px;
+  transition: all 0.5s ease;
+}
+.candidate-social a i:hover {
+  background: var(--navy-blue);
+}
+
+.candidate-text {
+  background: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -98px;
+  left: 0;
+  right: 0;
+  max-width: 95%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.candidate-text h3 {
+  margin-bottom: 15px;
+  color: var(--navy-blue);
+}
+.candidate-text h3 a {
+  font-size: 22px;
+  color: var(--navy-blue);
+  transition: all 0.4s ease;
+}
+.candidate-text ul li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: var(--small-font-color);
+}
+.candidate-text ul li:last-child {
+  margin-bottom: 0;
+}
+
+.bottom-text {
+  border-top: 1px dashed #e2caca;
+  margin-top: 14px;
+  padding: 14px 0 0;
+}
+.bottom-text p {
+  font-size: 16px;
+  color: var(--small-font-color);
+  float: left;
+}
+.bottom-text p i {
+  font-size: 18px;
+  top: 3px;
+  position: relative;
+}
+
+.bottom-text a {
+  float: right;
+}
+.bottom-text a i {
+  color: var(--red);
+  border: 1px dashed var(--red);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50px;
+}
+.bottom-text a i :hover {
+  background: var(--red);
+  color: var(--white);
+  transition: all 0.4s ease;
+}
+.condidate-item:hover .candidate-social {
+  bottom: 150px;
+}
+.condidate-item:hover .candidate-text h3 a {
+  color: var(--red);
+}
+
+/* --------------------------------- */
+.owl-slider .owl-dots {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+.owl-slider .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.397);
+}
+
+.owl-slider .owl-dots .owl-dot.active {
+  background: var(--red);
+}
+
+.owl-slider .owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+/*-------- Candidate section css  end -------- */
+
+/*------------ testimoneal section css start ------ */
+.testimonial-section {
+  background-image: url(/assets/images/testimonial-bg-img.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  padding: 40px 0px 0px 0px;
+}
+.testimonial-section::before {
+  position: absolute;
+  content: "";
+  background: rgba(1, 12, 41, 0.85);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.testimonial-items-wraper {
+  position: relative;
+}
+.testimonial-img {
+  margin-bottom: 20px;
+  /* margin-left: 15px; */
+}
+.testimonial-img img {
+  width: 100%;
+  min-height: 450px;
+}
+.testimonial-img-text {
+  text-align: center;
+  width: 100%;
+}
+.testimonial-img-text h3 {
+  color: var(--white);
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.testimonial-img-text p {
+  color: var(--small-font-color);
+  font-size: 14px;
+}
+
+.testimonial-text {
+  padding: 50px;
+  background: var(--white);
+}
+.testimonial-text i {
+  color: #fd987f;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.testimonial-text p {
+  color: var(--navy-blue);
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 15px;
+}
+.testimonial-items-wraper .owl-prev {
+  display: none !important;
+  position: absolute;
+}
+
+.testimonial-items-wraper .owl-next {
+  position: absolute;
+  bottom: 120px;
+  right: 25px;
+  color: var(--white) !important;
+  background: var(--red) !important;
+  width: 45px !important;
+  height: 45px !important;
+  line-height: 20px !important;
+  border-radius: 45px !important;
+  font-size: 20px !important;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.testimonial-items-wraper .owl-next:hover {
+  background: #010c29 !important;
+}
+
+.testimonial-items-wraper .owl-nav {
+  margin-top: 0 !important;
+}
+
+/*------------ testimoneal section css end ------ */
+
+/*------------ blog section css strat---------- */
+.blog-section {
+  padding: 50px 0px 30px 0px;
+}
+.blog-card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+}
+
+.blog-img {
+  overflow: hidden;
+}
+.blog-img img {
+  width: 100%;
+  transition: all 0.5s ease;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.blog-text {
+  padding: 10px 25px;
+}
+.blog-text ul {
+  margin-bottom: 10px;
+}
+.blog-text ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.blog-text ul li i {
+  color: var(--red);
+  /* margin-right: 2px; */
+}
+
+.blog-text h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.blog-text h3 a {
+  color: #010c29;
+}
+.blog-text h3 a:hover {
+  color: var(--red);
+}
+
+.blog-text p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.blog-btn {
+  color: var(--red);
+  font-size: 14px;
+}
+.blog-btn:hover {
+  color: #010c29;
+}
+
+.blog-btn i {
+  top: 2px;
+  /* position: relative; */
+  color: var(--red);
+  font-size: 14px;
+}
+
+.blog-card:hover .blog-img img {
+  transform: scale(1.1);
+  border-radius: 10px 10px;
+}
+
+/*------------ blog section css end---------- */
+
+/*==========================home page css end =================================*/
+
+/*========================About Page css start ================================*/
+
+/*---------- section banner css start----- */
+.section-banner {
+  background-image: url(/assets/images/about-banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  z-index: 0;
+  /* padding: 40px 0px 0px 0px; */
+  margin-top: 80px;
+}
+.section-banner::before {
+  position: absolute;
+  content: "";
+  background: rgba(1, 12, 41, 0.85);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.section-banner-wraper {
+}
+.section-banner-content {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-banner-content h3 {
+  text-align: center;
+  font-size: 45px;
+  color: var(--white);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.section-banner-content ul {
+  border: 1px solid rgba(255, 255, 255, 0.521);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+.section-banner-content ul li i {
+  font-size: 14px;
+}
+.section-banner-content ul li {
+  color: var(--white);
+  font-size: 17px;
+}
+.section-banner-content ul li a {
+  font-weight: 600;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+.section-banner-content ul li a:hover {
+  color: var(--red);
+}
+/*---------- section banner css start----- */
+
+.about-section {
+  padding: 50px 0px;
+}
+.about-text .section-title h2 {
+  color: var(--navy-blue);
+  font-size: 30px;
+  font-weight: 600;
+}
+.about-text p {
+  font-size: 15px;
+  color: var(--small-font-color);
+  margin-top: 20px;
+}
+/*----- about section css end----- */
+
+/* -----------Why Choose Section CSS Start --------*/
+
+.why-choose-two {
+  padding: 40px 0px 50px 0px;
+}
+.choose-card {
+  border: 1px dashed var(--red);
+  padding: 35px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+.choose-card i {
+  font-size: 40px;
+  color: var(--red);
+  background: #fdccc0;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50px;
+  text-align: center;
+  display: inline-block;
+  border: 1px dashed var(--red);
+  margin-bottom: 25px;
+}
+
+.choose-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--navy-blue);
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.choose-card p {
+  font-size: 14px;
+  transition: all 0.5s ease;
+  color: var(--small-font-color);
+}
+
+.choose-card:hover {
+  background: var(--red);
+}
+
+.choose-card:hover i {
+  border: 1px dashed var(--white);
+}
+
+.choose-card:hover h3,
+.choose-card:hover p {
+  color: var(--white);
+}
+
+/*-------------- Why Choose Section CSS End --------------*/
+
+/*--------- Grow Business CSS Start------ */
+.grow-business-section {
+  padding: 40px 0px 100px 0px;
+}
+.grow-text .section-title {
+  margin-bottom: 25px;
+}
+
+.grow-text .section-title h2 {
+  color: var(--navy-blue);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.grow-text p {
+  font-size: 15px;
+  color: var(--small-font-color);
+  margin-bottom: 20px;
+}
+
+.grow-business-btn {
+  background: var(--red);
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+}
+.grow-business-btn a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.grow-business-btn:hover {
+  background: var(--navy-blue);
+  border: 1px solid var(--white);
+}
+.grow-img {
+  animation: translateY 5s infinite linear;
+}
+@keyframes translateY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+/*--------- Grow Business CSS end------ */
+
+/* ------about counter section css start------- */
+.about-counter-section {
+  background-color: var(--navy-blue);
+  padding: 80px 0px;
+}
+.about-counter-text {
+  text-align: center;
+  margin-top: 25px;
+}
+.about-counter-text i {
+  font-size: 60px;
+  color: var(--red);
+  margin-bottom: 20px;
+  line-height: 60px;
+}
+.about-counter-text h2 {
+  color: var(--white);
+  font-size: 45px;
+  font-weight: 600;
+}
+.about-counter-text p {
+  font-size: 16px;
+  color: var(--white);
+}
+/* ------about counter section css end------- */
+
+/*------------- client client-review section----------- */
+.client-review-section {
+  padding: 50px 0px;
+}
+.client-review-items {
+}
+.client-review-text {
+  background-color: #fd987f5e;
+  transition: 0.5s ease;
+
+  padding: 35px;
+}
+.client-review-text:hover {
+  background-color: var(--red);
+  color: white;
+}
+.client-review-text:hover.client-review-text p,
+.client-review-text:hover.client-review-text i {
+  color: white;
+}
+.client-review-text i {
+  font-size: 30px;
+  color: #fd987f;
+  margin-bottom: 20px;
+  transition: 0.5s ease;
+}
+.client-review-text p {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy-blue);
+  transition: 0.5s ease;
+}
+.client-review-info-text {
+  margin-top: 20px;
+}
+.client-review-info-text h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy-blue);
+}
+.client-review-info-text p {
+  font-size: 14px;
+  color: var(--small-font-color);
+}
+
+.owl-theme .owl-prev,
+.owl-theme .owl-next {
+  background: #f7ac9a !important;
+  color: #ffffff !important;
+  font-size: 22px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50px !important;
+  line-height: 42px !important;
+  text-align: center !important;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 0 3px;
+}
+
+.owl-theme .owl-prev:hover,
+.owl-theme .owl-next:hover {
+  background: #fd1616 !important;
+  color: #ffffff !important;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 20px !important;
+  width: 100%;
+  text-align: center;
+}
+/*========================About Page css end ================================*/
+
+/* =======================job page css start================================= */
+/* --Job find section css start ---- */
+.job-find-section {
+  padding: 50px 0px;
+}
+/* --Jind section css end ---- */
+
+/* Subscribe CSS Start */
+.subscribe-section {
+  background: #fd1616;
+  padding: 80px 0;
+}
+
+.subscribe-section .section-title {
+}
+
+.subscribe-section .section-title h2 {
+  color: #ffffff;
+  margin: 0 auto 10px 0;
+}
+
+.subscribe-section .section-title p {
+  color: #ffffff;
+}
+
+.subscribe-section .newsletter-form {
+  position: relative;
+}
+
+.subscribe-section .newsletter-form .form-control {
+  height: 65px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.subscribe-section .newsletter-form .sub-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 65px;
+  border-radius: 10px;
+  background: #001935;
+  color: #ffffff;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.subscribe-section .newsletter-form .sub-btn:hover {
+  background: #fd1616;
+  border: 1px solid #ffffff;
+}
+
+.subscribe-section .newsletter-form ::placeholder {
+  font-size: 18px;
+}
+
+.subscribe-section .newsletter-form .validation-danger {
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* Subscribe CSS End */
+/* =======================job page css end================================= */
+
+.accordions .accordion-item {
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.accordions .accordion-item .accordion-title {
+  cursor: pointer;
+  padding: 15px 20px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #ffffff;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+.accordions .accordion-item .accordion-title i {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.accordions .accordion-item .accordion-title.active-title {
+  background-color: #001935;
+}
+
+.accordions .accordion-item .accordion-title.active-title h2 {
+  color: #ffffff;
+}
+
+.accordions .accordion-item .accordion-title.active-title h2 i {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordions .accordion-item .accordion-title h2 {
+  margin: 0;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #001935;
+  line-height: 20px;
+}
+
+.accordions .accordion-item .accordion-title h2 i {
+  font-size: 25px;
+  position: inherit;
+}
+
+.accordions .accordion-item .accordion-content {
+  display: none;
+  line-height: 1.7;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+}
+
+.accordions .accordion-item .accordion-content.active {
+  display: block;
+}
+
+.accordions .accordion-item .accordion-content p {
+  margin: 0;
+}
